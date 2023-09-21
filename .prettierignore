@@ -1,0 +1,8 @@
+#deve ler
+!.storybook
+!.jest
+
+#ignora
+build
+coverage
+.next

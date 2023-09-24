@@ -2,7 +2,12 @@ module.exports = {
   testEnvironment: 'jsdom', // environmet = browser
   testPathIgnorePatterns: ['/node_modules', '/.next/'], //ignore some folders
   collectCoverage: true, //mostrar a cobertura dos arquivos
-  collectCoverageFrom: ['src/**/*.ts(x)?'], //Tudo da pasta src q seja ts ou tsx
+  collectCoverageFrom: [
+    //Tudo da pasta src q seja ts ou tsx
+    'src/**/*.ts(x)?',
+    '!src/app/**', // ignorar esses arquivos - should be tested in e2e
+    '!src/lib/registry.tsx' // não interessa
+  ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   /* Carregar um arquivo antes de tudo - jest/setup.ts
   -> carregar jest.styledComponets quando for testar ele

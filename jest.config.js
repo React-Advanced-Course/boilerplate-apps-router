@@ -8,7 +8,8 @@ module.exports = {
     '!src/app/**', // ignorar esses arquivos - should be tested in e2e
     '!src/lib/registry.tsx', // não interessa
     '!src/types/**', // ignorar tudo que tem em types
-    '!src/styles/**' // ignorar tudo que tem na pasta styles
+    '!src/styles/**', // ignorar tudo que tem na pasta styles
+    '!src/**/stories.tsx'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   /* Carregar um arquivo antes de tudo - jest/setup.ts
